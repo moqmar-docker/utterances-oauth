@@ -1,0 +1,4 @@
+env:
+  TAG: momar/utterances-oauth
+run build the docker container: docker build --force-rm "$@" --tag "$TAG" .
+test: docker run --rm -it "$TAG" "$@"
